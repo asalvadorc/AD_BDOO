@@ -1,0 +1,21 @@
+site_url : https://asalvadorc.github.io/AD_BDOO
+
+site_name: AD - Accés a Dades
+
+extra_css:
+  - css/extra.css
+
+theme: 
+  name: readthedocs
+  highlightjs: true
+  logo: assets/logocaminas.png
+
+nav:
+
+- UD 4. BD Orientades a Objectes:
+  - 1 - Les Bases de Dades Orientades a Objectes: 3__bases_de_dades_orientades_a_objectes.md
+  - 2 - Exercicis: exercicis.md
+
+
+
+
