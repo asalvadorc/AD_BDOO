@@ -559,12 +559,14 @@ I en el cas de la inserció, abans d'inserir, podríem comprovar que no existeix
 DB4O disposa de tres formes de realitzar consultes. Totes elles són de tipus
 NoSQL.
 
-**Nota**
+<div style="background-color: #d6eaf8; color: black; padding: 5px;">
+<b>Nota</b><br>
 
 Si havíeu fet tots els exemples anteriors, potser siga millor esborrar
-**Empleats.db4o** i tornar a executar **Exemple1_InserirEmpleat.kt** i
-**Exemple1_1_InserirMesEmpleats.kt** per a crear-les de nou.
-
+<b>Empleats.db4o</b> i tornar a executar <b>Exemple1_InserirEmpleat.kt</b> i
+<b>Exemple1_1_InserirMesEmpleats.kt</b> per a crear-les de nou.
+<br>
+</div></p>
 **<u>Mètode _Query By Example_</u>**
 
 La primera forma ja s’ha comentat, és la que s’anomena consulta basada en un
@@ -604,10 +606,10 @@ el següent codi al fitxer **Exemple11_Consulta_QueryByExample.kt**
 
 cosa que donarà com a resultat el següent, que es pot comprovar que són del
 departament 10 i de Castelló:
-
+```
 Nif: 11111111a. Nom: Albert. Departament: 10. Població: Castelló  
 Nif: 22222222b. Nom: Berta. Departament: 10. Població: Castelló
-
+```
 Seguint aquest raonament, per obtenir tots els empleats de l’aplicació caldrà
 passar un patró empleat sense valors (**bd.queryByExample(Empleat() )**), i si
 el que desitgem és obtenir tots els objectes emmagatzemats a la base de dades,
@@ -804,10 +806,8 @@ anterior. Guardeu el següent codi al fitxer **Exemple14_QuerySoda_1.kt**
     }
 
 En realitat intentarà agafar en principi tots els objectes de la Base de
-Dades, i recordem que tenim objectes **Empleat** , **Adreca** i **Telefon**.
-Però observeu que no cal especificar que siga únicament objectes de la classe
-**Empleat** , perquè és l'única classe que té una propietat anomenada **nif**
-, per tant únicament selccionarà empleats
+Dades, i recordem que tenim objectes **Empleat**, **Adreca** i **Telefon**.
+Però observeu que no cal especificar que siga únicament objectes de la classe **Empleat**, perquè és l'única classe que té una propietat anomenada **nif**, per tant únicament selccionarà empleats
 
 Però si la relació ha de ser una comparació de tipus **major que** , **menor o
 igual que** , ... , caldrà especificar-les expressament. La manera serà
