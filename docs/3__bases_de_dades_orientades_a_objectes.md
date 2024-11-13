@@ -89,7 +89,7 @@ de malgastar recursos.
 ser adquirida per l'empresa **Versant** , que va continuar desenvolupant-lo
 com a Open Source.
 
-Em 2012, Versant va ser adquirida per la companyia **Actian** , que ja no ha
+En 2012, Versant va ser adquirida per la companyia **Actian** , que ja no ha
 continuat desenvolupant-lo com a Open Source, optant per un altre producte de
 pagament.
 
@@ -174,7 +174,7 @@ servidor utilitzaríem la classe **Db4o** per a fer la connexió. Com que
 nosaltres farem servir la versió integrada, utilitzarem la classe
 **Db4oEmbedded**.
 
-Connexió
+**<u>Connexió</u>**
 
 És tan senzill com cridar des de la classe **Db4oEmbedded** el mètode estàtic
 **openFile()** passant-li com a paràmetre el nom del fitxer. A partir d’aquest
@@ -185,7 +185,7 @@ tanquem amb el mètode **close()**.
     
     val bd = Db4oEmbedded.openFile("Empleats.db4o")
 
-Inserció
+**<u>Inserció</u>**
 
 Per a guardar un objecte utilitzem el mètode **store(objecte)**
 
@@ -271,7 +271,7 @@ seran dues empleades més. Copieu el següent codi al fitxer
     	bd.close()
     }
 
-Consulta bàsica
+**<u>Consulta bàsica</u>**
 
 En la següent pregunta, veurem les maneres de fer una consulta, però ara anem
 a veure la forma més senzilla, que és la realitzada a través del mètode
@@ -326,7 +326,7 @@ alguna instància, només serà una. Aquest seria el resultat:
 Nif: 11111111a. Nom: Albert. Població: Castelló  
 Primer correu: alu11111111a@ieselcaminas.org. Primer telèfon: 666777888.
 
-Esborrat
+**<u>Esborrat</u>**
 
 Per a poder fer una actualització o esborrat d'algun objecte de la Base de
 Dades, aquest s'ha de correspondre amb algun objecte del programa Java o
@@ -442,7 +442,7 @@ Hem esborrat a Clàudia
 I també ha desaparegut la seua adreça (C/ de Dalt de Borriana). Com que no
 tenia telèfons, continuen els mateixos d'abans
 
-Modificació
+**<u>Modificació</u>**
 
 Per a modificar un objecte de la Base de Dades primer haurem de tenir un
 objecte de Java que es corresponga amb ell (igual que en l'esborrat). Després
@@ -565,7 +565,7 @@ Si havíeu fet tots els exemples anteriors, potser siga millor esborrar
 **Empleats.db4o** i tornar a executar **Exemple1_InserirEmpleat.kt** i
 **Exemple1_1_InserirMesEmpleats.kt** per a crear-les de nou.
 
-Mètode _Query By Example_
+**<u>Mètode _Query By Example_</u>**
 
 La primera forma ja s’ha comentat, és la que s’anomena consulta basada en un
 exemple o “**query by example** ”. Consisteix, com ja hem vist, en trobar
@@ -623,7 +623,7 @@ consulta:
   * Tampoc podríem trobar aquells empleats que cobren més de 1300€ . En aquest tipus de consulta només podem buscar igualtats.
   * Com es basa en la coincidència, no podrem fer consultes que puguen agafar un de dos o més valors determinats. Per exemple, agafar els empleats que són de Castelló o Borriana.
 
-Mètode _Native Queries_
+**<u>Mètode _Native Queries_</u>**
 
 DB4O disposa d’un sistema molt més potent anomenat **Native Queries**. És
 fàcil deduir que es tracta d’un sistema vinculat directament al mateix
@@ -733,7 +733,7 @@ que les classes imbricades poden treballar directament amb tots els atributs
 (tinguin l’àmbit que tinguin) de la classe que les contingui i que les classes
 anònimes es defineixen a l’interior d’un mètode qualsevol.
 
-Mètode SODA
+**<u>Mètode SODA</u>**
 
 Existeix encara una altra forma de definir consultes. DB4O l’anomena **SODA**
 (_Simple Object Database Access_), i es pot considerar com la forma d’accedir
@@ -755,7 +755,9 @@ Per exemple, si ens trobem en el node de la classe **Empleat** i volguérem fer
 referència al nom de la població que en l’estructura de classes es troba a
 **empleat.adreca.poblacio** , hauríem de fer
 
-**node.descend("adreca").descend("poblacio")**
+```
+node.descend("adreca").descend("poblacio")
+```
 
 El resultat de la sentència anterior és un node focalitzat a l’atribut
 població continguda a l’adreça de l'empleat.
@@ -773,9 +775,9 @@ modificar la comparació i sentenciar en favor o en contra de la selecció d’u
 instància. Per defecte, la relació avaluada és la d’igualtat. Per exemple, si
 partim d’un node que representa el NIF d’un empleat, podem definir la relació
 d’igualtat següent:
-
+```
 node.constrain("11111111a")
-
+```
 Mirem com quedaria el programa que selecciona únicament l'empleat amb el nif
 anterior. Guardeu el següent codi al fitxer **Exemple14_QuerySoda_1.kt**
 
@@ -815,36 +817,36 @@ especificant un mètode de la restricció. Les possibilitats seran:
 Si suposem que partim d’un node focalitzat al **sou** d’un empleat i volem la
 condició que el sou siga major estrictament que 1300. S’indicaria d'aquesta
 manera:
-
+```
 node.constrain(1300).greater()
-
+```
   * Menor: **smaller()**  
 Si volem que el sou siga estrictament menor que 1500:
-
+```
 node.constrain(1500).smaller()
-
+```
   * Major o igual, menor o igual:**equal()** (després del greater o smaller)  
 Si ara volem que el sou siga menor o igual que 1500:
-
+```
 node.constrain(1300).smaller().equal()
-
+```
   * Que comence per: **startsWith(boolean)**  
 Si partim d'un node focalitzat al **nom** de l'empleat i volem els que
 comencen per **A** :
-
+```
 node.constrain("A").startsWith(true)
-
+```
 Si en el paràmetre booleà posem true, haurà de coincidir exactament el
 principi. Si posem false, no distingirà entre majúscules i minúscules.
 
   * Per a unir restriccions: **or(restriccio)** **and(restriccio)**. Per a negar **not()**  
 Per exemple, si partim d’un node focalitzat al **nom** de l'empleat, podem
 seleccionar tots els que comencen per **A** o per **B** , fent:
-
+```
 var constr1 = node.constrain("A").startsWith()  
 val constr2 = node.constrain("B").startsWith()  
 constr1.or(constr2)
-
+```
   * Si posem més d'una restricció (més d'un constrain), s'hauran de complir totes, i per tant actua com un **and**
 
 A banda de les restriccions, si volem ordenar de forma ascendent o descendent,

@@ -11,9 +11,9 @@ en el projecte el driver per a **DB4O** , sino el tenies incorporat.
   * Hem de canviar la definició de les propietats de la classe **Ruta** , ja que ara hem de permetre valors nuls per a poder fer consultes pel mètode **queryByExample()**. La manera més senzilla segurament serà:
 
     
-    
+```  
     class Ruta (var nom: String?, var desnivell: Int?, var desnivellAcumulat: Int?, var llistaDePunts: MutableList<PuntGeo> = mutableListOf<PuntGeo>()): Serializable 
-
+```
   * D'aquesta manera, per a crar un objecte **Ruta** que estiga totalment buit, ho faríem així: **Ruta(null,null,null)**
   * Podria ser que aquest canvi en la definició de les propietat de **Ruta** provoque algun error en **GestionarRutesBD**. Si és així corregeix-los
 
@@ -26,7 +26,7 @@ des de **Rutes.sqlite** fins la Base de Dades de **DB4O** **Rutes.db4o**.
     * Tanca la connexió.
   * Crea la classe **Ex3_VisRutaDB4O.kt** , que ha de connectar a la Base de Dades **Rutes.db4o** , ha de llegir totes les rutes (ves amb compte, perquè només has de llegir rutes; s'han guardat més objectes: punts i coordenades) i ha de traure per pantalla el nom de la ruta i el número de punts.
 
-![](T6_Ex_3_1.png)
+>>>![](T6_Ex_3_1.png)
 
 
 ## ![](icon_activity.gif) Exercici 6.2
