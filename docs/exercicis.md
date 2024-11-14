@@ -32,7 +32,7 @@ des de **Rutes.sqlite** fins la Base de Dades de **DB4O** **Rutes.db4o**.
 ## ![](icon_activity.gif) Exercici 6.2
 
 En el mateix projecte i paquet anem a fer una aplicació amb interfície
-gràfica, com en un exercici voluntari del Tema 4, però ara atancant a DB4O.
+gràfica atancant a DB4O.
 
 El programa mostrarà una ruta, i hi haurà també uns botons per anar a la
 primera, anterior, següent i última ruta. Hi ha també el botó de Tancar, que
