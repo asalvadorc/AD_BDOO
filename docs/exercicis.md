@@ -193,7 +193,7 @@ sentències necessàries després dels comentaris:
 
 
 
-## ![](icon_activity.gif) Exercici 6.3
+## ![](icon_activity.gif) Exercici 6.3 (voluntari)
 
 Modificar la classe anterior per a incorporar també la **distància total de la
 ruta**. Per a poder calcular-la ens ajudarem de la següent funció que calcula
