@@ -138,7 +138,7 @@ En un projecte nou, anomenat **Tema6** , anem a incorporar el driver de
 
 **db4o-8.0.249.16098-all-java5.jar**
 
-Per organitzar-lo millor creem un paquet anomenat**classesEmpleat** , que ens
+Per organitzar-lo millor creem un paquet anomenat **classesEmpleat** , que ens
 servirà per a fer tots els exemples. Ens crearem la classe **Empleat** , i les
 classes **Adreca** i **Telefon** que utilitzarà aquella. Construïm les classes
 de la manera més còmoda. Això sí, a **Empleat** li afegirem dos
@@ -500,8 +500,8 @@ El següent exemple és idèntic a l'anterior, però es tanca i es torna a obrir
 la BD després d'haver assignat a **e** l'objecte, i abans de guardar-lo; per
 tant L'OBJECTE ESTÀ SEPARAT (ja no està associat a un objecte de la Base de
 Dades). En principi el que voldríem és modificar les dades de l'empleat
-existent, **però en realitat ham introduït un nou empleat** (amb el mateix
-nif, nom, ...), i per tant **molt perillós** perquè estam duplicant la
+existent, **però en realitat hem introduït un nou empleat** (amb el mateix
+nif, nom, ...), i per tant **molt perillós** perquè estem duplicant la
 informació. Observeu que, com que només es vol modificar el sou, no cal
 actualitzar en cascada. Si voleu provar l'exemple, gaurdeu el següent codi en
 el fitxer Kotlin **Exemple6_ModificacióIncorrecta.kt**. I recordeu que la Base

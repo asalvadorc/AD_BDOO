@@ -20,11 +20,11 @@ en el projecte el driver per a **DB4O** , sino el tenies incorporat.
 A partir d'aci comença realment l'exercici, que consistirà en passar les dades
 des de **Rutes.sqlite** fins la Base de Dades de **DB4O** **Rutes.db4o**.
 
-  * Crea't el programa **Ex3_PassarRutaSqliteDB4O.kt**. 
+  * Crea't el programa **Ex1_PassarRutaSqliteDB4O.kt**. 
     * Has d'agafar totes les rutes de Rutes.sqlite i deixar-les en un ArrayList de Ruta amb el mètode ja creat de **GestionarRutesBD.java** anomenat **llistat()**.
     * Insereix totes les rutes en la BD **Rutes.db4o**.
     * Tanca la connexió.
-  * Crea la classe **Ex3_VisRutaDB4O.kt** , que ha de connectar a la Base de Dades **Rutes.db4o** , ha de llegir totes les rutes (ves amb compte, perquè només has de llegir rutes; s'han guardat més objectes: punts i coordenades) i ha de traure per pantalla el nom de la ruta i el número de punts.
+  * Crea la classe **Ex1_VisRutaDB4O.kt** , que ha de connectar a la Base de Dades **Rutes.db4o** , ha de llegir totes les rutes (ves amb compte, perquè només has de llegir rutes; s'han guardat més objectes: punts i coordenades) i ha de traure per pantalla el nom de la ruta i el número de punts.
 
 >>>![](T6_Ex_3_1.png)
 
@@ -52,7 +52,7 @@ no poder introduir cap informació.
 
 Aquest seria l'esquelet del programa.
 
-Copieu-lo en un fitxer Kotlin anomenat **Ex4_VisRutes_DB4O.kt** , i poseu les
+Copieu-lo en un fitxer Kotlin anomenat **Ex2_VisRutes_DB4O.kt** , i poseu les
 sentències necessàries després dels comentaris:
 
     
@@ -204,7 +204,7 @@ calcular la distància de forma correcta hem de tenir en compte tots els punts
 circular seria 0).
 
 Podeu incorporar-la a la classe on esteu fent l'exercici
-(**Ex4_VisRutes_DB4O.kt**).
+(**Ex2_VisRutes_DB4O.kt**).
 
     
     
