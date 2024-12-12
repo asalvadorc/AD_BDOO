@@ -24,7 +24,7 @@ des de **Rutes.sqlite** fins la Base de Dades de **DB4O** **Rutes.db4o**.
     * Has d'agafar totes les rutes de Rutes.sqlite i deixar-les en un ArrayList de Ruta amb el mètode ja creat de **GestionarRutesBD.java** anomenat **llistat()**.
     * Insereix totes les rutes en la BD **Rutes.db4o**.
     * Tanca la connexió.
-  * Crea la classe **Ex1_VisRutaDB4O.kt** , que ha de connectar a la Base de Dades **Rutes.db4o** , ha de llegir totes les rutes (ves amb compte, perquè només has de llegir rutes; s'han guardat més objectes: punts i coordenades) i ha de traure per pantalla el nom de la ruta i el número de punts.
+  * Crea't el programa **Ex1_VisRutaDB4O.kt** , que ha de connectar a la Base de Dades **Rutes.db4o** , ha de llegir totes les rutes (ves amb compte, perquè només has de llegir rutes; s'han guardat més objectes: punts i coordenades) i ha de traure per pantalla el nom de la ruta i el número de punts.
 
 >>>![](T6_Ex_3_1.png)
 
